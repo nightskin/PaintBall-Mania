@@ -43,6 +43,11 @@ public class GameScript : MonoBehaviour
     void Update()
     {
         UpdateTimer();
+        if (seconds == 0 && minutes == 0)
+        {
+            SceneManager.LoadScene("Results");
+        }
+
     }
 
     void UpdateTimer()
