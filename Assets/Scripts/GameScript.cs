@@ -21,8 +21,13 @@ public class GameScript : MonoBehaviour
     public int seconds = 0;
     public int minutes = 60;
 
+    public GameObject keeper;
+
     void Start()
     {
+        keeper = Instantiate(new GameObject());
+        keeper.AddComponent<ScoreKeeper>();
+
         cpus = GameObject.FindGameObjectsWithTag("CPU");
         if (seconds <= 9)
         {
